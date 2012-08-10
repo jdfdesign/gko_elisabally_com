@@ -1,11 +1,11 @@
-cd ~/Github/gko_elisa_bally_com
+cd ~/Github/gko_elisabally_com
 tail -f log/development.log
 
-cd ~/Github/gko_elisa_bally_com
+cd ~/Github/gko_elisabally_com
 bundle install
 
 bundle exec rake assets:precompile
-cd ~/Github/gko_elisa_bally_com
+cd ~/Github/gko_elisabally_com
 bundle exec rake railties:install:migrations
 bundle exec rake db:bootstrap
 

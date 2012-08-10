@@ -236,10 +236,7 @@ ul.nav {
 }
 .html-text {
 	font-weight: 100;
-	margin-left: 120px;
-	padding-left: $baseLineHeight;
 	letter-spacing: 1px;
-	border-left: 1px solid $lightBrown;
 	table {
 		width: 100%;
 		margin-bottom: 18px;
@@ -276,11 +273,10 @@ body {
  HEADER
 ----------------------------------------- */
 
-.container-fluid {
-	padding: 0;
-}
+
 .navbar-inner {
 	padding: 0;
+	position:relative;
 }
 
 .navbar .brand {
@@ -317,6 +313,18 @@ text-shadow: none;
 		padding-left: 0;
 	};
 }
+.navbar address {
+	float: left;
+	font-size: 11px;
+}
+
+.navbar .btn.btn-navbar {
+  @include buttonBackground($lightBrown, $lightBrown);
+	margin: 8px;
+	clear: both;
+	float: left;
+}
+
 /*-----------------------------------------
  FOOTER
 ----------------------------------------- */
@@ -374,12 +382,20 @@ text-shadow: none;
 @import "twitter/bootstrap/responsive";
 
 
-@media (max-width: 767px) {
-	body {
-		padding-left: 0;
-		padding-right: 0;
+@media (min-width: 767px) {
+	.container-fluid {
+		padding: 0;
 	}
-
+	.navbar address {
+		position: absolute;
+		top: 72px;
+		left: 224px;
+	}
+	.html-text {
+		margin-left: 120px;
+		padding-left: $baseLineHeight;
+		border-left: 1px solid $lightBrown;
+	}
 }
 @media (max-width: 979px) {
 	
@@ -412,18 +428,16 @@ text-shadow: none;
 	  	background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
 		color: $navbarLinkColorHover;
 	}
+	
+	.navbar .brand {
+		margin-top: $baseLineHeight;
+	}
 
 }
 @media (min-width: 980px) {
 
-
-
-
 	#primary-menu ul.nav {
 		margin-top: $baseLineHeight;
 	}
-	
 
-
-	
 }

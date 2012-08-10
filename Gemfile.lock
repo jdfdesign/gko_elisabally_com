@@ -1,14 +1,11 @@
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_auth
+GIT
+  remote: git@github.com:jdfdesign/gko_cms3.git
+  revision: c111f922b9a499143bc9df1e791962ca4a049c49
   specs:
-    gko_auth (0.3.49)
+    gko_auth (0.3.50)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_core
-  specs:
-    gko_core (0.3.49)
+    gko_core (0.3.50)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -41,28 +38,12 @@ PATH
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_documents
-  specs:
-    gko_documents (0.3.49)
+    gko_documents (0.3.50)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_gallery
-  specs:
-    gko_gallery (0.3.49)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_images
-  specs:
-    gko_images (0.3.49)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_inquiries
-  specs:
-    gko_inquiries (0.3.49)
+    gko_gallery (0.3.50)
+    gko_images (0.3.50)
+    gko_inquiries (0.3.50)
       filters_spam (~> 0.2)
       launchy
 
@@ -250,12 +231,12 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth!
-  gko_core!
-  gko_documents!
-  gko_gallery!
-  gko_images!
-  gko_inquiries!
+  gko_auth (= 0.3.50)!
+  gko_core (= 0.3.50)!
+  gko_documents (= 0.3.50)!
+  gko_gallery (= 0.3.50)!
+  gko_images (= 0.3.50)!
+  gko_inquiries (= 0.3.50)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)
