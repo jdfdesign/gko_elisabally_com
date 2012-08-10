@@ -1,0 +1,15 @@
+cd ~/Github/gko_elisa_bally_com
+tail -f log/development.log
+
+cd ~/Github/gko_elisa_bally_com
+bundle install
+
+bundle exec rake assets:precompile
+cd ~/Github/gko_elisa_bally_com
+bundle exec rake railties:install:migrations
+bundle exec rake db:bootstrap
+
+ 
+bundle exec rake db:admin:create
+bundle exec rake db:load_default 
+bundle exec rake db:load_sample  
