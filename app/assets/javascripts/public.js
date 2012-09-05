@@ -86,8 +86,6 @@ $(document).ready(function() {
 
 
 		initGalleria();
-		
-		
 	}
 	
 
@@ -96,7 +94,7 @@ $(document).ready(function() {
 			$(".galleria").galleria({
 				autoplay: true,
 				responsive: true,
-				height: .85,
+				height: .70,
 				imageCrop: 'landscape',
 				transition: 'slide',
 				thumbMargin: 10,

@@ -210,9 +210,13 @@ $fluidGridGutterWidth:    2.127659574%;// !default
 
 @import "twitter/bootstrap";
 @import "gko/mixin.1.0.0";
-@import "gko/grid";
+@import "gko/default";
 @import "galleria";
 
+
+.next-previous {
+	display:none;
+}
 /*-----------------------------------------
  STRUCTURAL LAYOUT 
 ----------------------------------------- */
@@ -280,7 +284,7 @@ body {
 }
 
 .navbar .brand {
-	margin-top: $baseLineHeight;
+	margin-top: $baseLineHeight * 2;
 	margin-left: 0;
 	padding: 0;
 	letter-spacing: 4px;
@@ -314,17 +318,18 @@ text-shadow: none;
 	};
 }
 .navbar address {
-	float: left;
+	float: none;
 	font-size: 11px;
+	padding: 12px 0;
+	text-align: center;
 }
 
-.navbar .btn.btn-navbar {
+.navbar .btn-navbar {
   @include buttonBackground($lightBrown, $lightBrown);
-	margin: 8px;
 	clear: both;
-	float: left;
+	width: 100%;
+	color: $darkBrown;
 }
-
 /*-----------------------------------------
  FOOTER
 ----------------------------------------- */
@@ -342,28 +347,35 @@ text-shadow: none;
 		margin-bottom: $baseLineHeight * 2;
 		box-shadow: none;
 		border: none;
-		.thumbnail-image {
+		padding: 0;
+		
+		.image {
 			background-color: none;
 			@include transition("all 0.3s ease-in-out");
+			border: 1px solid $lightBrown;
+			text-align: center;
+			background-color: white;
 			&:hover {
 				opacity: .7;
 			};
 		}
-		.thumbnail-caption { 
+		.caption { 
 			margin-top: $baseLineHeight * .25;
 			padding: 8px 12px;
-			text-align: right;
-
+			text-align: center;
+			
 		}
-		.thumbnail-title {
+		.title {
 			text-transform:uppercase;
 			font-weight: 300;
 			letter-spacing: 2px;
 			font-size: 11px;
 			line-height: $baseLineHeight;
 		}
-		
-		.thumbnail-links a {
+		.links {
+			display:none;
+		}
+		.links a {
 			border: none;
 			padding: 0;
 			background: transparent asset-url("next-prev.gif", image) right 0 no-repeat;
@@ -376,25 +388,26 @@ text-shadow: none;
 		}
 	} 
 }
+
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
 @import "twitter/bootstrap/responsive";
-
+.container-fluid {
+	padding: 0;
+}
 
 @media (min-width: 767px) {
-	.container-fluid {
-		padding: 0;
-	}
-	.navbar address {
-		position: absolute;
-		top: 72px;
-		left: 224px;
-	}
+
+
 	.html-text {
 		margin-left: 120px;
 		padding-left: $baseLineHeight;
 		border-left: 1px solid $lightBrown;
+	}
+	
+	.container-fluid {
+		padding: 0;
 	}
 }
 @media (max-width: 979px) {
@@ -433,11 +446,19 @@ text-shadow: none;
 		margin-top: $baseLineHeight;
 	}
 
+	.navbar address {
+		clear: both;
+	}
 }
 @media (min-width: 980px) {
 
 	#primary-menu ul.nav {
 		margin-top: $baseLineHeight;
 	}
-
+	.navbar address {
+		float: left;
+		border-left: 1px solid $lightBrown;
+		padding: 22px 12px 0 12px;
+		margin-left: 24px;
+	}
 }

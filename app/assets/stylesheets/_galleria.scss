@@ -126,6 +126,11 @@ $thumbnailContainerHeight: 100px;
     opacity: 1;
     filter: alpha(opacity=100);
 }
+.galleria-image {
+   border: 1px solid $lightBrown;
+	@include box-sizing(border-box);
+}
+
 .galleria-image-nav {
     position: absolute;
     top: 50%;
