@@ -209,8 +209,8 @@ $thumbnailContainerHeight: 100px;
     display: none;
     position: absolute;
     left: 0;
-    top: 0;
-    height: $thumbnailHeight;
+    top: 7px;
+    height: 63px;
     width: 23px;
     z-index: 3;
     opacity: .8;
@@ -218,8 +218,8 @@ $thumbnailContainerHeight: 100px;
 
   font-size: 30px;
   font-weight: bold;
-  line-height: $thumbnailHeight;
-  color: white;
+  line-height: 63px;
+  color: $lightBrown;
   text-align: center;
 }
 .galleria-thumb-nav-right {
@@ -235,7 +235,8 @@ $thumbnailContainerHeight: 100px;
 .notouch .galleria-thumb-nav-right:hover {
     opacity: 1;
     filter: alpha(opacity=100);
-    background-color: #111;
+    background-color: $lightBrown;
+	color: $darkBrown;
 }
 .touch .galleria-thumb-nav-left:active,
 .touch .galleria-thumb-nav-right:active {
