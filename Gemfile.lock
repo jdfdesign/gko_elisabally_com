@@ -1,12 +1,12 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: d92c0711ba185cd4eed0cb604d6d2e0ba6464f1c
+  revision: 5161b4f31653701303c5fd91d9f70bd2a3399eaf
   specs:
-    gko_auth (0.3.90)
+    gko_auth (0.4.04)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-    gko_categories (0.3.90)
-    gko_core (0.3.90)
+    gko_categories (0.4.04)
+    gko_core (0.4.04)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -18,7 +18,7 @@ GIT
       cucumber (~> 1.1.4)
       dragonfly (~> 0.9.12)
       dropbox-sdk (~> 1.2.0)
-      exception_notification
+      exception_notification (~> 2.6.1)
       faker (= 1.0.0)
       gem-patching (= 0.0.3)
       globalize3 (= 0.2.0)
@@ -45,14 +45,14 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.3.90)
+    gko_documents (0.4.04)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_images (0.3.90)
-    gko_inquiries (0.3.90)
+    gko_images (0.4.04)
+    gko_inquiries (0.4.04)
       filters_spam (~> 0.2)
-    gko_portfolio (0.3.90)
-    gko_stickers (0.3.90)
+    gko_portfolio (0.4.04)
+    gko_stickers (0.4.04)
 
 GEM
   remote: http://rubygems.org/
@@ -258,14 +258,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth (= 0.3.90)!
-  gko_categories (= 0.3.90)!
-  gko_core (= 0.3.90)!
-  gko_documents (= 0.3.90)!
-  gko_images (= 0.3.90)!
-  gko_inquiries (= 0.3.90)!
-  gko_portfolio (= 0.3.90)!
-  gko_stickers (= 0.3.90)!
+  gko_auth (= 0.4.04)!
+  gko_categories (= 0.4.04)!
+  gko_core (= 0.4.04)!
+  gko_documents (= 0.4.04)!
+  gko_images (= 0.4.04)!
+  gko_inquiries (= 0.4.04)!
+  gko_portfolio (= 0.4.04)!
+  gko_stickers (= 0.4.04)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)

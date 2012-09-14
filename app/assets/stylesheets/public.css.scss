@@ -255,7 +255,7 @@ ul.nav {
 }
 
 .page-title {
-	font-weight: 700;
+	font-weight: 300;
 	margin: $baseLineHeight 0;
 	letter-spacing: 2px;
 	border-bottom: 1px solid $lightBrown;
@@ -467,7 +467,9 @@ text-shadow: none;
 		float: left;
 		text-align: left;
 	}
-
+	.nav-collapse {
+		clear: both;
+	}
 	.nav-collapse nav .nav {
 		margin-top: $baseLineHeight;
 	}

@@ -336,14 +336,6 @@ ActiveRecord::Schema.define(:version => 20120905144723) do
     t.datetime "updated_at",                    :null => false
   end
 
-  create_table "mail_methods", :force => true do |t|
-    t.integer  "site_id"
-    t.string   "environment"
-    t.boolean  "active",      :default => true
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
   create_table "partner_translations", :force => true do |t|
     t.integer  "partner_id"
     t.string   "locale"
