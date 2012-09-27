@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120905144723) do
+ActiveRecord::Schema.define(:version => 20120921131159) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -485,6 +485,8 @@ ActiveRecord::Schema.define(:version => 20120905144723) do
     t.integer  "site_registrations_count", :default => 0
     t.integer  "languages_count",          :default => 0
     t.text     "mailer_settings"
+    t.datetime "liquid_models_updated_at"
+    t.text     "page_types"
   end
 
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
