@@ -50,9 +50,9 @@ $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;// !defau
 $serifFontFamily:       "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;// !default
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;// !default
 
-$baseFontSize:          16px;// !default
+$baseFontSize:          12px;// !default
 $baseFontFamily:        $sansFontFamily;// !default
-$baseLineHeight:        24px;// !default
+$baseLineHeight:        18px;// !default
 $altFontFamily:         $serifFontFamily;// !default
 
 $headingsFontFamily:    inherit;// !default // empty to use BS default, @baseFontFamily
@@ -220,10 +220,6 @@ $fluidGridGutterWidth:    2.127659574%;// !default
  STRUCTURAL LAYOUT 
 ----------------------------------------- */
 ul.nav {
-	.text {
-		display:inline-block;
-	    @include ie7-inline-block();
-	}
 	li a {
 		@include transition(all 0.3s ease-in-out);
 		font-weight: 300;
@@ -238,19 +234,8 @@ ul.nav {
 	}
 }
 .html-text {
-	font-weight: 100;
+	font-weight: 300;
 	letter-spacing: 1px;
-	table {
-		width: 100%;
-		margin-bottom: 18px;
-		th, td {
-		padding: 8px;
-		line-height: 18px;
-		text-align: left;
-		vertical-align: top;
-		border-top: 1px solid #DDD;
-		}
-	}
 }
 
 .page-title {
@@ -258,7 +243,7 @@ ul.nav {
 	margin: $baseLineHeight 0;
 	letter-spacing: 2px;
 	border-bottom: 1px solid $lightBrown;
-	font-size: 18px;
+	font-size: 16px;
 	text-transform: uppercase;
 }
 body {
@@ -319,10 +304,10 @@ text-shadow: none;
 	};
 }
 .navbar address {
-	float: none;
 	font-size: 11px;
-	//padding: 12px 0;
-	text-align: center;
+	a {
+		color: $white;
+	}
 }
 #locales-menu {
 	padding-top: 2px;
@@ -340,6 +325,12 @@ text-shadow: none;
 ----------------------------------------- */
 #footer {
 	padding: $baseLineHeight;
+}
+/*-----------------------------------------
+ COPYRIGHT
+----------------------------------------- */
+#site_by {
+	float: right;
 }
 /*-----------------------------------------
  CONTENT
@@ -448,6 +439,10 @@ text-shadow: none;
 	
 	.navbar address {
 		clear: both;
+		float: none;
+		text-align: center;
+		width: auto;
+		margin-top: $baseLineHeight;
 	}
 	
 	#locales-menu {
@@ -461,10 +456,29 @@ text-shadow: none;
 	}
 }
 @media (min-width: 980px) {
-	.navbar .brand {
-		clear: both;
-		float: left;
-		text-align: left;
+	.navbar {
+		.brand {
+			clear: both;
+			float: left;
+			text-align: left;
+		}
+		.header-nav {
+			position:relative;	
+			.nav {
+				float: left; 
+				margin-top: $baseLineHeight;
+				margin-left: 36px;
+				li {
+					float: none;
+				}
+			}
+		}
+		address {
+			margin-top: $baseLineHeight;
+		}
+	}
+	.nav > li > a {
+		padding: 0;
 	}
 	.nav-collapse {
 		clear: both;
@@ -472,9 +486,5 @@ text-shadow: none;
 	.nav-collapse nav .nav {
 		margin-top: $baseLineHeight;
 	}
-	.navbar address {
-		float: left;
-		//padding: 22px 12px 0 12px;
-		//margin-left: 24px;
-	}
+
 }
