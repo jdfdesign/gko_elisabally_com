@@ -1,15 +1,16 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 75230ee5069899456551735b72df713fc4e69ad9
+  revision: 70ad2f34ecac74be2e8c45e053b703ff47146a65
   specs:
-    gko_auth (0.4.22)
+    gko_auth (0.5.06)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-    gko_categories (0.4.22)
-    gko_core (0.4.22)
+    gko_categories (0.5.06)
+    gko_core (0.5.06)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
+      babosa (~> 0.3.8)
       backup (~> 3.0.24)
       capistrano
       carrierwave
@@ -29,10 +30,10 @@ GIT
       jquery-rails (= 2.0.3)
       json
       letter_opener
-      mysql2 (= 0.3.11)
+      mobile-fu
+      mysql2 (~> 0.3.11)
       nested_set (= 1.7.0)
-      nokogiri (~> 1.5.0)
-      rack-cache (>= 0.5.3)
+      rack-cache (~> 1.2)
       rack-mount (~> 0.8.3)
       rails (= 3.2.3.rc2)
       rake (~> 0.9.2.2)
@@ -45,14 +46,14 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.4.22)
+    gko_documents (0.5.06)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_images (0.4.22)
-    gko_inquiries (0.4.22)
+    gko_images (0.5.06)
+    gko_inquiries (0.5.06)
       filters_spam (~> 0.2)
-    gko_portfolio (0.4.22)
-    gko_stickers (0.4.22)
+    gko_portfolio (0.5.06)
+    gko_stickers (0.5.06)
 
 GEM
   remote: http://rubygems.org/
@@ -89,22 +90,23 @@ GEM
     acts_as_indexed (0.7.8)
     addressable (2.3.2)
     arel (3.0.2)
+    babosa (0.3.8)
     backup (3.0.24)
       open4 (~> 1.3.0)
       thor (~> 0.14.6)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     cancan (1.6.8)
-    capistrano (2.13.4)
+    capistrano (2.13.5)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
-    carrierwave (0.7.0)
+    carrierwave (0.7.1)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
-    codemirror-rails (2.34)
+    codemirror-rails (2.35)
       railties (~> 3.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -144,7 +146,7 @@ GEM
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       paper_trail (~> 2)
-    gon (4.0.0)
+    gon (4.0.1)
       actionpack (>= 2.3.0)
       json
     has_scope (0.5.1)
@@ -171,6 +173,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
+    mobile-fu (1.1.1)
+      rack-mobile-detect
+      rails
     multi_json (1.2.0)
     mysql2 (0.3.11)
     nested_set (1.7.0)
@@ -183,16 +188,17 @@ GEM
     net-ssh (2.6.1)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    nokogiri (1.5.5)
     open4 (1.3.0)
     orm_adapter (0.4.0)
-    paper_trail (2.6.3)
+    paper_trail (2.6.4)
       activerecord (~> 3.0)
       railties (~> 3.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-mobile-detect (0.4.0)
+      rack
     rack-mount (0.8.3)
       rack (>= 1.0.0)
     rack-ssl (1.3.2)
@@ -239,11 +245,11 @@ GEM
     term-ansicolor (1.0.7)
     thor (0.14.6)
     tilt (1.3.3)
-    treetop (1.4.11)
+    treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.5.5)
-    tzinfo (0.3.33)
+    tzinfo (0.3.35)
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
@@ -258,14 +264,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth (= 0.4.22)!
-  gko_categories (= 0.4.22)!
-  gko_core (= 0.4.22)!
-  gko_documents (= 0.4.22)!
-  gko_images (= 0.4.22)!
-  gko_inquiries (= 0.4.22)!
-  gko_portfolio (= 0.4.22)!
-  gko_stickers (= 0.4.22)!
+  gko_auth (= 0.5.06)!
+  gko_categories (= 0.5.06)!
+  gko_core (= 0.5.06)!
+  gko_documents (= 0.5.06)!
+  gko_images (= 0.5.06)!
+  gko_inquiries (= 0.5.06)!
+  gko_portfolio (= 0.5.06)!
+  gko_stickers (= 0.5.06)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)
