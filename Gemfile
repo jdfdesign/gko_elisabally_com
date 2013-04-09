@@ -1,3 +1,6 @@
+source :rubygems 
+'https://rubygems.org'
+
 group :assets do
  gem 'sass-rails', '~> 3.2.6'
  gem 'coffee-rails', '~> 3.2.2'
@@ -5,7 +8,7 @@ group :assets do
 end
 
 group :production do
-  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.6.24.RC21" do
+  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.6.24.RC22" do
     gem 'gko_core'
     gem 'gko_auth'
     gem 'gko_images'
