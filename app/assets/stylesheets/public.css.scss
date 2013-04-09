@@ -208,7 +208,7 @@ $fluidGridColumnWidth:    6.382978723%;// !default
 $fluidGridGutterWidth:    2.127659574%;// !default
 
 
-@import "twitter/bootstrap";
+@import "twitter.2.0.4/bootstrap";
 @import "gko/public/base";
 @import "galleria";
 
@@ -311,6 +311,8 @@ text-shadow: none;
 }
 #locales-menu {
 	padding-top: 2px;
+	position: relative;
+	height: 22px;
 }
 .navbar .btn-navbar {
   @include buttonBackground($lightBrown, $lightBrown);

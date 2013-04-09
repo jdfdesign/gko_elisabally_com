@@ -8,7 +8,7 @@ bundle exec rake assets:precompile
 cd ~/Github/gko_elisabally_com
 bundle exec rake railties:install:migrations
 bundle exec rake db:bootstrap
-
+rake db:migrate
  
 bundle exec rake db:admin:create
 bundle exec rake db:load_default 
